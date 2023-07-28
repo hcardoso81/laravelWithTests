@@ -2,4 +2,11 @@
 
 ## Creating a new project
 
--   laravel new laravelWithTests --pest
+-   laravel new laravelWithTests
+-
+
+## Creating first test
+
+-   https://www.youtube.com/watch?v=pkB4WV2M-ek&list=PLDYiB4l8VPZa-2tNcgPZYpPuHo-zZBxHY&index=2
+
+<p> Test: I can see the "documentation" word in the home page</p>
