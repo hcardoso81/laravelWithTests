@@ -24,10 +24,11 @@
                                         <td>{{ $product->price }}</td>
                                     </tr>
                                 @empty
+
+                                    <tr>
+                                        <td col-span="3">No se encontraton productos</td>
+                                    </tr>
                                 @endforelse
-                                <tr>
-                                    <td col-span="3">No se encontraton productos</td>
-                                </tr>
                             </tbody>
                         </table>
 

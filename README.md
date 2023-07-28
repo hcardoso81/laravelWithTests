@@ -13,8 +13,13 @@
 
 <p> Test: I can see the "documentation" word in the home page</p>
 
-## Creating test Products
+## Creating test Products Table empty
 
 -   https://www.youtube.com/watch?v=eV2m0TmjaZw&list=PLDYiB4l8VPZa-2tNcgPZYpPuHo-zZBxHY&index=3
 <p>test_can_see_the_products_page</p>
--   php artisan make:model Product -c
+-   php artisan make:model Product -c -m
+
+## Creating test Products Table non empty
+
+-   https://www.youtube.com/watch?v=SYr5Wxsk0wE&list=PLDYiB4l8VPZa-2tNcgPZYpPuHo-zZBxHY&index=4
+<p>Connect a dataBase sqlite for testing</p>
