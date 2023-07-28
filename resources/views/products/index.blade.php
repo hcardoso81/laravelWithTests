@@ -6,8 +6,8 @@
             <div class="col-md-8">
                 <div class="card">
                     <div class="card-header">Productos</div>
-
                     <div class="card-body">
+                        <a href="{{ route('products.create') }}" class="btn btn-primary mb-3">Nuevo Producto</a>
                         <table class="table">
                             <thead>
                                 <tr>

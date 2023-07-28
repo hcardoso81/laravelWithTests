@@ -23,3 +23,8 @@
 
 -   https://www.youtube.com/watch?v=SYr5Wxsk0wE&list=PLDYiB4l8VPZa-2tNcgPZYpPuHo-zZBxHY&index=4
 <p>Connect a dataBase sqlite for testing</p>
+
+## Creating test create a new product
+
+-   https://www.youtube.com/watch?v=3VSKZkDwyGE&list=PLDYiB4l8VPZa-2tNcgPZYpPuHo-zZBxHY&index=5
+

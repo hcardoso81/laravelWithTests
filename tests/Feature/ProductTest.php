@@ -32,4 +32,25 @@ class ProductTest extends TestCase
         $response->assertViewHas('products', Product::all());
         $response->assertDontSee('No se encontraton productos');
     }
+
+    public function test_can_a_new_product(): void
+    {
+        $product = [
+            'name' => 'Producto #1',
+            'price' => 25,
+        ];
+
+        $response = $this->post('/products', $product);
+        $response->assertStatus(302);
+        $response->assertRedirect(route('products.index'));
+        $this->assertDatabaseCount('products', 1);
+        $lastProductcreated = Product::query()->latest()->first();
+        /*$this->assertDatabaseHas('products', [
+            'name' => $lastProductcreated->name,
+            'price' => $lastProductcreated->price
+        ]);*/
+        $this->assertDatabaseHas('products', $product);
+        $this->assertEquals($product['name'], $lastProductcreated->name);
+        $this->assertEquals($product['price'], $lastProductcreated->price);
+    }
 }
