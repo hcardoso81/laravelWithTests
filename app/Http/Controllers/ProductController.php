@@ -7,8 +7,6 @@ use Illuminate\Contracts\View\View;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
 
-
-
 class ProductController extends Controller
 {
     public function index(): View
@@ -25,6 +23,20 @@ class ProductController extends Controller
     public function store(Request $request): RedirectResponse
     {
         Product::create([
+            'name' => $request->input('name'),
+            'price' => $request->input('price'),
+        ]);
+        return redirect()->route('products.index');
+    }
+
+    public function edit(Product $product): View
+    {
+        return view('products.edit', compact('product'));
+    }
+
+    public function update(Product $product, Request $request): RedirectResponse
+    {
+        $product->update([
             'name' => $request->input('name'),
             'price' => $request->input('price'),
         ]);

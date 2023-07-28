@@ -28,3 +28,6 @@
 
 -   https://www.youtube.com/watch?v=3VSKZkDwyGE&list=PLDYiB4l8VPZa-2tNcgPZYpPuHo-zZBxHY&index=5
 
+## Creating test edit a product
+
+-   https://www.youtube.com/watch?v=Kjb-l411gKQ&list=PLDYiB4l8VPZa-2tNcgPZYpPuHo-zZBxHY&index=6

@@ -14,6 +14,7 @@
                                     <th>ID</th>
                                     <th>Producto</th>
                                     <th>Precio</th>
+                                    <th>Acciones</th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -22,11 +23,14 @@
                                         <td>{{ $product->id }}</td>
                                         <td>{{ $product->name }}</td>
                                         <td>{{ $product->price }}</td>
+                                        <td><a href="{{ route('products.edit', $product->id) }}"
+                                                class="btn btn-primary">Editar</a>
+                                        </td>
                                     </tr>
                                 @empty
 
                                     <tr>
-                                        <td col-span="3">No se encontraton productos</td>
+                                        <td col-span="4">No se encontraton productos</td>
                                     </tr>
                                 @endforelse
                             </tbody>
