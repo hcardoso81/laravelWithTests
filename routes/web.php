@@ -18,9 +18,11 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/products', [ProductController::class, 'index'])->name('products.index');
 
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+//Route::middleware(['auth'])->group(function () {
 Route::resource('products', ProductController::class);
+//});

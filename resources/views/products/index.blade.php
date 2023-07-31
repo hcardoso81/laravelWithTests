@@ -23,8 +23,21 @@
                                         <td>{{ $product->id }}</td>
                                         <td>{{ $product->name }}</td>
                                         <td>{{ $product->price }}</td>
-                                        <td><a href="{{ route('products.edit', $product->id) }}"
-                                                class="btn btn-primary">Editar</a>
+                                        <td>
+                                            <div class="d-inline-flex">
+
+                                                <a href="{{ route('products.edit', $product->id) }}"
+                                                    class="btn btn-primary mx-1">Editar</a>
+
+                                                <form action="{{ route('products.destroy', $product->id) }}" method="POST">
+                                                    @csrf
+                                                    @method('DELETE')
+                                                    <input type="submit" class="btn btn-danger mx-1" value="Eliminar">
+                                                </form>
+
+                                            </div>
+
+
                                         </td>
                                     </tr>
                                 @empty

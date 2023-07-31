@@ -62,10 +62,21 @@ class ProductTest extends TestCase
             'name' => 'Producto Editado',
             'price' => 300,
         ]);
+
         $response->assertStatus(302);
         $response->assertRedirect(route('products.index'));
         $this->assertDatabaseCount('products', 1);
         $lastProductUpdated = Product::query()->latest()->first();
         $this->assertEquals('Producto Editado', $lastProductUpdated->name);
+    }
+
+    public function test_can_delete_product_successfull(): void
+    {
+        $product = Product::factory()->create();
+
+        $response = $this->delete('/products/' . $product->id);
+        $response->assertStatus(302);
+        $this->assertDatabaseCount('products', 0);
+        $this->assertDatabaseMissing('products', $product->toArray());
     }
 }

@@ -28,6 +28,12 @@
 
 -   https://www.youtube.com/watch?v=3VSKZkDwyGE&list=PLDYiB4l8VPZa-2tNcgPZYpPuHo-zZBxHY&index=5
 
-## Creating test edit a product
+## Creating test edit a product by id
 
 -   https://www.youtube.com/watch?v=Kjb-l411gKQ&list=PLDYiB4l8VPZa-2tNcgPZYpPuHo-zZBxHY&index=6
+
+## Creating test delete a product by id
+
+-   https://www.youtube.com/watch?v=8vSs7kn865E&list=PLDYiB4l8VPZa-2tNcgPZYpPuHo-zZBxHY&index=7
+
+-   create a factory : php artisan make:factory ProductFactory
