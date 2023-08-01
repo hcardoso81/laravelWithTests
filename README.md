@@ -44,3 +44,11 @@
 
 -   create a formRequest: php artisan make:request StoreProductRequest, php artisan make:request UpdateProductRequest
 -   create test validation php artisan make:test Validations/ProductValidationTest
+
+## Creating test login user
+
+-   https://www.youtube.com/watch?v=Pq3UBo0EaNE&list=PLDYiB4l8VPZa-2tNcgPZYpPuHo-zZBxHY&index=9
+
+-   create a test: php artisan make:test Auth/LoginTest
+-   
+
