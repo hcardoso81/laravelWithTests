@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\StoreProductRequest;
 use App\Models\Product;
 use Illuminate\Contracts\View\View;
 use Illuminate\Http\RedirectResponse;
@@ -20,12 +21,10 @@ class ProductController extends Controller
         return view('products.create');
     }
 
-    public function store(Request $request): RedirectResponse
+    public function store(StoreProductRequest $request): RedirectResponse
     {
-        Product::create([
-            'name' => $request->input('name'),
-            'price' => $request->input('price'),
-        ]);
+
+        Product::create($request->validated());
         return redirect()->route('products.index');
     }
 

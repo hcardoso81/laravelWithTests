@@ -37,3 +37,10 @@
 -   https://www.youtube.com/watch?v=8vSs7kn865E&list=PLDYiB4l8VPZa-2tNcgPZYpPuHo-zZBxHY&index=7
 
 -   create a factory : php artisan make:factory ProductFactory
+
+## Creating test validations product
+
+-   https://www.youtube.com/watch?v=7j0vqvV2vFI&list=PLDYiB4l8VPZa-2tNcgPZYpPuHo-zZBxHY&index=8
+
+-   create a formRequest: php artisan make:request StoreProductRequest, php artisan make:request UpdateProductRequest
+-   create test validation php artisan make:test Validations/ProductValidationTest
