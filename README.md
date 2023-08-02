@@ -59,8 +59,10 @@
 -   update model User, put new field in $fillable
 -   create a new Middleware: php artisan make:middleware IsAdmin
 
-## Creating trait CreateUser by uses all test
+## Livewire installation
 
--   https://www.youtube.com/watch?v=PCwLYUE-fK8&list=PLDYiB4l8VPZa-2tNcgPZYpPuHo-zZBxHY&index=11
+-   https://www.youtube.com/watch?v=eP0u3THTK5I&list=PLDYiB4l8VPZabgVKHTCBwWvZXQWPZg6-S&index=2
 
--   create new file test/CreateUser.php
+-   composer require livewire/livewire
+-   clean view welcome
+-   create first component php artisan make:livewire FirstComponent
