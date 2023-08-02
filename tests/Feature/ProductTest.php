@@ -6,22 +6,15 @@ use App\Models\Product;
 use App\Models\User;
 use Illuminate\Foundation\Testing\RefreshDatabase;
 use Illuminate\Foundation\Testing\WithFaker;
+use Tests\CreateUser;
 use Tests\TestCase;
 
 class ProductTest extends TestCase
 {
     use RefreshDatabase;
+    use CreateUser;
     private User $user;
 
-    private function createNewUser(bool $is_admin = false): User
-    {
-        $user = User::factory()->create([
-            'email' => $is_admin ? 'admin@admin.com' : 'user@user.com',
-            'password' => bcrypt('12345'),
-            'is_admin' => $is_admin,
-        ]);
-        return $user;
-    }
 
 
     public function test_an_admin_can_see_the_empty_products_table(): void
@@ -67,12 +60,12 @@ class ProductTest extends TestCase
         $response = $this->actingAs($user)->post('/products', $product);
         $response->assertStatus(302);
 
-        /*$response->assertRedirect(route('products.index'));
+        $response->assertRedirect(route('products.index'));
         $this->assertDatabaseCount('products', 1);
         $lastProductCreated = Product::query()->latest()->first();
         $this->assertDatabaseHas('products', $product);
         $this->assertEquals($product['name'], $lastProductCreated->name);
-        $this->assertEquals($product['price'], $lastProductCreated->price);*/
+        $this->assertEquals($product['price'], $lastProductCreated->price);
     }
 
     public function test_can_edit_a_product(): void

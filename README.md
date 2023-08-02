@@ -58,3 +58,9 @@
 -   update migration users: add boolean field is_admin, default false
 -   update model User, put new field in $fillable
 -   create a new Middleware: php artisan make:middleware IsAdmin
+
+## Creating trait CreateUser by uses all test
+
+-   https://www.youtube.com/watch?v=PCwLYUE-fK8&list=PLDYiB4l8VPZa-2tNcgPZYpPuHo-zZBxHY&index=11
+
+-   create new file test/CreateUser.php
