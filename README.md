@@ -50,5 +50,11 @@
 -   https://www.youtube.com/watch?v=Pq3UBo0EaNE&list=PLDYiB4l8VPZa-2tNcgPZYpPuHo-zZBxHY&index=9
 
 -   create a test: php artisan make:test Auth/LoginTest
--   
 
+## Creating test roles user
+
+-   https://www.youtube.com/watch?v=NqIAK6xpMEM&list=PLDYiB4l8VPZa-2tNcgPZYpPuHo-zZBxHY&index=10
+
+-   update migration users: add boolean field is_admin, default false
+-   update model User, put new field in $fillable
+-   create a new Middleware: php artisan make:middleware IsAdmin

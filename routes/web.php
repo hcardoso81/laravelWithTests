@@ -23,6 +23,6 @@ Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
-//Route::middleware(['auth'])->group(function () {
-Route::resource('products', ProductController::class);
-//});
+Route::middleware(['auth', 'is_admin'])->group(function () {
+    Route::resource('products', ProductController::class);
+});

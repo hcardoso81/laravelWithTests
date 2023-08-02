@@ -10,6 +10,7 @@ use Tests\TestCase;
 class ProductValidationTest extends TestCase
 {
 
+
     public function test_product_name_field_is_required(): void
     {
         $product = [
