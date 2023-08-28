@@ -59,10 +59,19 @@
 -   update model User, put new field in $fillable
 -   create a new Middleware: php artisan make:middleware IsAdmin
 
-## Livewire installation
+## Livewire installation. Creation first component
 
 -   https://www.youtube.com/watch?v=eP0u3THTK5I&list=PLDYiB4l8VPZabgVKHTCBwWvZXQWPZg6-S&index=2
 
 -   composer require livewire/livewire
 -   clean view welcome
 -   create first component php artisan make:livewire FirstComponent
+
+## Livewire component: Public Properties y Data Binding
+
+-   https://www.youtube.com/watch?v=uibRvXgnJzg&list=PLDYiB4l8VPZabgVKHTCBwWvZXQWPZg6-S&index=3
+-   php artisan make:livewire PublicPropertiesComponent1
+
+## Laravel Livewire Desde Cero: Eventos, SweetAlert, Modal
+
+https://www.youtube.com/watch?v=itfbL16IxEM&list=PLDYiB4l8VPZabgVKHTCBwWvZXQWPZg6-S&index=9

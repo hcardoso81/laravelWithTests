@@ -10,6 +10,8 @@
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.bunny.net">
     <link href="https://fonts.bunny.net/css?family=figtree:400,600&display=swap" rel="stylesheet" />
+    <!-- Scripts -->
+    @vite(['resources/sass/app.scss', 'resources/js/app.js'])
 
     <!-- Styles -->
     <style>
@@ -126,14 +128,7 @@
             text-transform: none
         }
 
-        [type=button],
-        [type=reset],
-        [type=submit],
-        button {
-            -webkit-appearance: button;
-            background-color: transparent;
-            background-image: none
-        }
+
 
         :-moz-focusring {
             outline: auto
@@ -833,7 +828,7 @@
 
 <body class="antialiased">
     <div
-        class="relative sm:flex sm:justify-center sm:items-center min-h-screen bg-dots-darker bg-center bg-gray-100 dark:bg-dots-lighter dark:bg-gray-900 selection:bg-red-500 selection:text-white">
+        class="relative lg:flex sm:justify-center sm:items-center min-h-screen bg-dots-darker bg-center bg-gray-100 dark:bg-dots-lighter dark:bg-gray-900 selection:bg-red-500 selection:text-white">
         @if (Route::has('login'))
         <div class="sm:fixed sm:top-0 sm:right-0 p-6 text-right z-10">
             @auth
@@ -863,21 +858,40 @@
             </div>
 
             <div class="mt-16">
-                <h1 class="text-xl font-bold">LiveWire Components</h1>
-                <div class="mt-6 grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8">
-                    <div>
+                <h1 class="text-xl font-bold mb-5">LiveWire Components</h1>
+                <div class="row">
+                    <div class="col border p-4">
                         <livewire:first-component />
                     </div>
-                    <div>chau</div>
-
-
-
+                    <div class="col border p-4">
+                        <livewire:public-properties-component1 />
+                    </div>
+                    <div class="col border p-4">
+                        3 of 3
+                    </div>
                 </div>
+                <div class="row">
+                    <div class="col border p-4">
+                        <livewire:form-modal-sweet-alert-component />
+                    </div>
+                    <div class="col border p-4">
+                        2 of 2
+                    </div>
+                </div>
+
             </div>
 
         </div>
     </div>
     @livewireScripts
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+    {{-- @yield('scripts') --}}
+    {{-- utilizo stack para que el contenido se vaya appendeando --}}
+    @stack('scripts')
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous">
+    </script>
 </body>
 
 </html>
